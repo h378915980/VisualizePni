@@ -3,7 +3,9 @@
 
 #include <QMainWindow>
 #include <QFileDialog>
-
+#include <QMessageBox>
+#include <QDebug>
+#include "./source/tool/inifile.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -21,7 +23,15 @@ public:
 private slots:
     void on_actionOpen_File_triggered();
 
+    void on_pushButton_applyChange_clicked();
+
 private:
     Ui::MainWindow *ui;
+
+    int crystalNumX;
+    int crystalNumY;
+    int crystalNumZ;
+
+    void showAllSetting();
 };
 #endif // MAINWINDOW_H
